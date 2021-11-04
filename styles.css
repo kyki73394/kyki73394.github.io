@@ -1,11 +1,42 @@
 body {
-  background-color: : #fff6f2;
+  background-color: #fff6f2;
   font-family: 'Montserrat', sans-serif;
 }
 
+
+/* NAV BAR */
 ul {
   list-style-type: none;
+  padding: 0;
   text-align: right;
-  display: inline;
   font-size: 15pt;
+}
+
+li {
+  display: inline;
+  margin: 0px 20px 0px 20px;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+li a:hover {
+  color: grey;
+}
+
+li a::after {
+  color: black;
+}
+
+
+.home_green {
+  height: 650px;
+  width: 100%;
+  background-color: #1e443d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
