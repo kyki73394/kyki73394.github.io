@@ -1,11 +1,11 @@
 body {
   background-color: : #fff6f2;
   font-family: 'Montserrat', sans-serif;
-  color: white;
 }
 
-.nav {
-  list-style: none;
+ul .nav {
+  list-style-type: none;
   text-align: right;
   display: inline;
+  font-size: 15pt;
 }
