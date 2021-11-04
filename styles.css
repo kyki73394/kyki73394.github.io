@@ -1,4 +1,11 @@
 body {
   background-color: : #fff6f2;
   font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.nav {
+  list-style: none;
+  text-align: right;
+  display: inline;
 }
