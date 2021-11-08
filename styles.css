@@ -32,6 +32,8 @@ li a::after {
   color: white;
 }
 
+/*HOME PAGE*/
+
 /* Home elements */
 
 .home_green {
@@ -66,4 +68,22 @@ li a::after {
 
 .home_header h3 {
   margin: 40px 0px 5px 0px;
+}
+
+/* Curiosities */
+.cur_box {
+  height: 350px;
+  width: 250px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid black;
+  display: inline-block;
+  margin-left: 10%;
+  margin-top: 200px;
+}
+
+.cur_label h3 {
+  display: inline-block;
+  text-align: center;
+  margin-left: 10%;
 }
