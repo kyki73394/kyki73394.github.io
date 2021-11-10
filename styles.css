@@ -107,9 +107,10 @@ body {
   border-radius: 20px;
   border: 1px solid black;
   margin: 50px;
-  /* display: inline-block;
-  margin-left: 10%; */
 }
+
+
+/* Referenced this site for flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 
 .all_box {
   display: flex;
