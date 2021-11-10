@@ -37,7 +37,7 @@ body {
 /* Home elements */
 
 .home_green {
-  height: 650px;
+  height: 100%;
   width: 100%;
   background-color: #1e443d;
   position: absolute;
@@ -75,6 +75,7 @@ body {
   padding: 5px;
   text-align: center;
   background-color: white;
+  margin-top: 30%; /* This works for laptop screens; also affects formatting of cur_box */
 }
 
 .contact_links {
@@ -111,7 +112,6 @@ body {
   margin: 50px;
 }
 
-
 /* Referenced this site for flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 
 .all_box {
@@ -128,7 +128,7 @@ body {
 }
 
 .cur_label h3 {
-  margin: 0 150px;
+  margin: 0 12%;
 }
 
 /* CSS FOR CONTACT FORM via FreeContactForm.com */
@@ -138,18 +138,17 @@ body {
 }
 
 .fcf-body {
-    margin: 0;
-    font-family: -apple-system, Arial, sans-serif;
+    margin: 50px 30%;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff;
+    background-color: #fffcfb;
     padding: 30px;
     padding-bottom: 10px;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
+    border: 1px solid black;
+    border-radius: 25px;
     max-width: 100%;
 }
 
@@ -186,7 +185,7 @@ body {
 }
 
 .fcf-form-control:focus {
-    border: 1px solid #313131;
+    border: 1px solid black;
 }
 
 select.fcf-form-control[size], select.fcf-form-control[multiple] {
@@ -194,8 +193,8 @@ select.fcf-form-control[size], select.fcf-form-control[multiple] {
 }
 
 textarea.fcf-form-control {
-    font-family: -apple-system, Arial, sans-serif;
     height: auto;
+    font-family: 'Montserrat', sans-serif;
 }
 
 label.fcf-label {
@@ -203,6 +202,7 @@ label.fcf-label {
     margin-bottom: 0.5rem;
 }
 
+/* commented out in html */
 .fcf-credit {
     padding-top: 10px;
     font-size: 0.9rem;
@@ -222,7 +222,7 @@ label.fcf-label {
 .fcf-btn {
     display: inline-block;
     font-weight: 400;
-    color: #212529;
+    color: white;
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
@@ -246,7 +246,7 @@ label.fcf-label {
 }
 
 .fcf-btn:hover {
-    color: #212529;
+    color: #f3e6e7;
     text-decoration: none;
 }
 
@@ -256,20 +256,20 @@ label.fcf-label {
 }
 
 .fcf-btn-primary {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+    color: black;
+    background-color: white;
+    border-color: black;
 }
 
 .fcf-btn-primary:hover {
-    color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc;
+    color: black;
+    background-color: #f3e6e7;
+    border-color: black;
 }
 
 .fcf-btn-primary:focus, .fcf-btn-primary.focus {
     color: #fff;
-    background-color: #0069d9;
+    background-color: red;
     border-color: #0062cc;
     box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
@@ -283,7 +283,8 @@ label.fcf-label {
 
 .fcf-btn-block {
     display: block;
-    width: 100%;
+    width: 200px;
+    margin: auto;
 }
 
 .fcf-btn-block+.fcf-btn-block {
