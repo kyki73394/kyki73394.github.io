@@ -4,7 +4,7 @@ body {
 }
 
 
-/* NAV BAR */
+/* HOME NAV BAR */
 .nav {
   list-style-type: none;
   padding: 0;
@@ -30,6 +30,34 @@ body {
 
 .nav li a::after {
   color: white;
+}
+
+/* Other Pages NAV BAR */
+.altnav {
+  list-style-type: none;
+  padding: 0;
+  text-align: right;
+  font-size: 15pt;
+
+}
+
+.altnav li {
+  display: inline;
+  margin: 0px 20px 0px 20px;
+  color: black;
+}
+
+.altnav li a {
+  text-decoration: none;
+  color: black;
+}
+
+.altnav li a:hover {
+  color: grey;
+}
+
+.altnav li a::after {
+  color: black;
 }
 
 /*HOME PAGE*/
@@ -95,7 +123,8 @@ body {
 }
 
 .contact_links a :hover {
-  color: grey;
+  color: red;
+  text-decoration: underline;
 }
 
 .contact_links a ::after {
@@ -130,6 +159,34 @@ body {
 .cur_label h3 {
   margin: 0 12%;
 }
+
+
+/* PROJECTS PAGE */
+
+.proj_btn {
+  padding: 2px 25px;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+.all_proj_bts {
+  padding-left: 50px;
+}
+
+.proj_box {
+  height: 250px;
+  width: 250px;
+  background-color: white;
+  margin: 25px;
+}
+
+.proj_txt {
+  width: 250px;
+  font-size: 14pt;
+  float: right;
+  margin-right: 250px;
+}
+
 
 /* CSS FOR CONTACT FORM via FreeContactForm.com */
 
