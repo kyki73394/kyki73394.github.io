@@ -5,6 +5,14 @@ body {
 
 
 /* HOME NAV BAR */
+#allnav {
+  background-color: red;
+}
+
+nav {
+  background-color: purple;
+}
+
 .nav {
   list-style-type: none;
   padding: 0;
