@@ -25,11 +25,17 @@ function scrollFunction() {
 
 //edited from toggle Dark Mode from w3 schools
 function toggleUX() {
-  var elem = document.getElementById("box_ux");
+  var elem = document.getElementById("box_code");
   elem.classList.toggle("box_off");
+
+  var elem = document.getElementById("ux_btn");
+  elem.classList.toggle("btn_change");
 }
 
 function toggleCode() {
-  var elem = document.getElementById("box_code");
+  var elem = document.getElementById("box_ux");
   elem.classList.toggle("box_off");
+
+  var elem = document.getElementById("code_btn");
+  elem.classList.toggle("btn_change");
 }
