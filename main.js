@@ -30,6 +30,9 @@ function toggleUX() {
 
   var elem = document.getElementById("ux_btn");
   elem.classList.toggle("btn_change");
+
+  var elem = document.getElementById("code_btn");
+  elem.classList.toggle("box_off");
 }
 
 function toggleCode() {
@@ -38,4 +41,7 @@ function toggleCode() {
 
   var elem = document.getElementById("code_btn");
   elem.classList.toggle("btn_change");
+
+  var elem = document.getElementById("ux_btn");
+  elem.classList.toggle("box_off");
 }
