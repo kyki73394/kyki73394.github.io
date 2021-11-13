@@ -250,6 +250,24 @@ nav {
   margin-right: 250px;
 }
 
+/* ABOUT PAGE */
+.about_body {
+  background-color: #FBFBFB;
+}
+
+.profile_pic {
+  position: absolute;
+  overflow: hidden;
+  top: 20%;
+  height: 400px;
+  background-color: grey;
+  margin: 0 0 0 20%;
+}
+
+.profile_text {
+  width: 400px;
+  margin: 10% 10% 0 45%;
+}
 
 /* CSS FOR CONTACT FORM via FreeContactForm.com */
 
