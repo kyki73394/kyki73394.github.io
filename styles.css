@@ -115,9 +115,6 @@ nav {
   overflow: hidden;
 }
 
-.home_profile_pic {
-
-}
 
 .home_header {
   text-align: center;
@@ -132,6 +129,7 @@ nav {
 .home_header h3 {
   margin: 40px 0px 5px 0px;
 }
+
 
 /* .empty_home {
   height: 400px;
@@ -187,6 +185,17 @@ iframe {
   border-radius: 20px;
   border: 1px solid black;
   margin: 50px;
+}
+
+.cur_box_home {
+  height: 350px;
+  width: 250px;
+  border-radius: 20px;
+  /* border: 1px solid black; */
+  margin: 50px;
+  overflow: hidden;
+  background-color: #f3e6e7;
+
 }
 
 /* Referenced this site for flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
