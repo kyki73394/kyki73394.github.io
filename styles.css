@@ -112,6 +112,11 @@ nav {
   border: 2px solid white;
   margin: auto;
   margin-top: 8%;
+  overflow: hidden;
+}
+
+.home_profile_pic {
+
 }
 
 .home_header {
@@ -128,9 +133,9 @@ nav {
   margin: 40px 0px 5px 0px;
 }
 
-.empty_home {
-
-}
+/* .empty_home {
+  height: 400px;
+} */
 
 .pg_label {
   padding: 5px;
