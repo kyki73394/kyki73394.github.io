@@ -45,3 +45,17 @@ function toggleCode() {
   var elem = document.getElementById("ux_btn");
   elem.classList.toggle("box_off");
 }
+
+// animation referenced from https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Add the animation class
+      entry.target.classList.add('anim_proj_home');
+      console.log("yes")
+    }
+  });
+});
+
+observer.observe(document.querySelector('.proj_label'));
+observer.observe(document.querySelector('.home_proj_img'));

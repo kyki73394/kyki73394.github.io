@@ -148,6 +148,21 @@ nav {
   text-align: center;
 }
 
+/* animation referenced from https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/ */
+.anim_proj_home {
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
 .home_proj_img img {
   width: 250px;
   margin: 20px;
