@@ -52,7 +52,6 @@ const observer = new IntersectionObserver(entries => {
     if (entry.isIntersecting) {
       // Add the animation class
       entry.target.classList.add('anim_proj_home');
-      console.log("yes")
     }
   });
 });
