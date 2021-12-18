@@ -126,6 +126,29 @@ nav {
   font-weight: lighter;
 }
 
+/* referenced https://blog.hubspot.com/website/scrolling-text-css */
+.scroll_cont {
+  width: 130px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.scroll_text {
+  font-size: 20pt;
+  font-weight: lighter;
+  animation: scrollHome 10s infinite;
+  width: 400px;
+}
+
+@keyframes scrollHome {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .small_text {
   margin: 10px 0 10px 0;
   font-size: 14pt;
