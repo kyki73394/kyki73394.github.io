@@ -409,6 +409,11 @@ nav {
   margin-right: 250px;
 }
 
+.spacer {
+  height: 100vh;
+  width: 100%;
+}
+
 /* ABOUT PAGE */
 .about_body {
   background-color: #FBFBFB;
@@ -426,4 +431,5 @@ nav {
 .profile_text {
   width: 400px;
   margin: 10% 10% 0 45%;
+  height: 100vh;
 }
