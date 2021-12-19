@@ -6,13 +6,13 @@ body {
 
 
 /* HOME NAV BAR */
-#allnav {
+/* #allnav {
   background-color: red;
 }
 
 nav {
   background-color: purple;
-}
+} */
 
 .nav {
   list-style-type: none;
@@ -99,7 +99,8 @@ nav {
 
 .home_green {
   height: 100%;
-  width: 45%;
+  /* width: 45%; */
+  width: 100%;
   background-color: green;
   position: absolute;
   top: 0;
@@ -108,7 +109,7 @@ nav {
 }
 
 .home_header {
-  color: black;
+  color: white;
   position: absolute;
   top: 30%;
   left: 50%;
@@ -195,13 +196,75 @@ nav {
   justify-content: center;
 }
 
+/* skill section */
+
+.stats {
+  background-color: #ccb7ae;
+  margin: 450px 20% 10% 20%;
+  padding: 25px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+}
+
+.stats h3 {
+  font-size: 20pt;
+}
+
+.stat_bar {
+  height: 25px;
+  width: 300px;
+  background-color: #ccb7ae;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  color: #40160f;
+}
+
+.html_stat {
+  background-color: #40160f;
+  width: 90%;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.css_stat {
+  background-color: #40160f;
+  width: 80%;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.py_stat {
+  background-color: #40160f;
+  width: 70%;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.js_stat {
+  background-color: #40160f;
+  width: 70%;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.react_stat {
+  background-color: #40160f;
+  width: 50%;
+  height: 25px;
+  margin-right: 10px;
+}
+
+/* contact footer */
+
 .contact_links {
   background-color: green;
   height: 150px;
   width: 100%;
-  position: absolute;
+  /* position: absolute;
   top: 200vh;
-  left: 0;
+  left: 0; */
 }
 
 .contact_links ul {
