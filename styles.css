@@ -266,6 +266,27 @@ iframe {
 
 /* PROJECTS PAGE */
 
+.proj_img {
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: row;
+}
+
+.proj_img img {
+  margin-right: 10%;
+}
+
+.proj_img p {
+  margin-top: 5%;
+  font-size: 14pt;
+}
+
+.all_proj_img {
+  margin: 10% 0 0 15%;
+  display: flex;
+  flex-direction: column;
+}
+
 /* ART PAGE */
 
 .proj_btn {
@@ -285,7 +306,7 @@ iframe {
 
 .btn_change {
   background-color: white;
-  border: 2px solid pink; 
+  border: 2px solid pink;
 }
 
 .all_art_bts {
