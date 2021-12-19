@@ -178,6 +178,12 @@ nav {
 .home_proj_img img {
   width: 250px;
   margin: 20px;
+  transition: transform 300ms;
+}
+
+/* animation referenced from https://thoughtbot.com/blog/transitions-and-transforms */
+.home_proj_img img:hover {
+  transform: translateY(-10px);
 }
 
 .home_proj_img {
@@ -187,10 +193,6 @@ nav {
   width: 100%;
   display: flex;
   justify-content: center;
-}
-
-iframe {
-  margin: 5% 27%;
 }
 
 .contact_links {
@@ -289,24 +291,26 @@ iframe {
 
 /* ART PAGE */
 
-.proj_btn {
+.art_btn {
   padding: 2px 25px;
   display: inline-block;
   height: 40px;
   font-size: 14pt;
-  background-color: pink;
+  background-color: #fefefa;
   border-radius: 20px;
-  border: none;
+  border: 2px solid #ccb7ae;
 }
 
-.proj_btn:hover {
-  background-color: white;
-  border: 2px solid pink;
+.art_btn:hover {
+  background-color: #ccb7ae;
+  border: none;
+  color: #40160f;
 }
 
 .btn_change {
-  background-color: white;
-  border: 2px solid pink;
+  background-color: #ccb7ae;
+  border: none;
+  color: #40160f;
 }
 
 .all_art_bts {
@@ -320,6 +324,7 @@ iframe {
   background-color: grey;
   margin: 10px;
   float:left;
+  transition: transform 300ms;
 }
 
 .all_proj_boxes {
@@ -331,8 +336,7 @@ iframe {
 }
 
 .proj_box:hover {
-  height: 270px;
-  width: 270px;
+  transform: scale(1.08);
 }
 
 .proj_txt {
