@@ -137,16 +137,16 @@ nav {
 .scroll_text {
   font-size: 20pt;
   font-weight: lighter;
-  animation: scrollHome 10s infinite;
+  animation: 3s linear 300ms infinite scrollHome;
   width: 400px;
 }
 
 @keyframes scrollHome {
   0% {
-    transform: translateX(100%);
+    transform: translateX(30%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-70%);
   }
 }
 
