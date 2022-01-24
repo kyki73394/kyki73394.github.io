@@ -2,14 +2,17 @@
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-if (document.body.scrollTop > 750 || document.documentElement.scrollTop > 750) {
-  document.getElementById("nav_logo").style.color = "black";
 
-} else if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-  document.getElementById("nav_logo").style.color = "black";
+  const height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
+  const halfHeight = height / 2;
 
-} else {
-  document.getElementById("nav_logo").style.color = "white";
+  if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
+    document.getElementById("nav_logo").style.color = "black";
+    document.getElementById("home_header").style.display = "none";
+
+  } else {
+    document.getElementById("nav_logo").style.color = "white";
+    document.getElementById("home_header").style.display = "block";
   }
 }
 
