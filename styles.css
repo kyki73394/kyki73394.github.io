@@ -162,9 +162,6 @@ nav {
 }
 
 .home_proj_img {
-  position: absolute;
-  top: 130vh;
-  left: 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -174,7 +171,7 @@ nav {
 
 .stats {
   background-color: #ccb7ae;
-  margin: 450px 20% 10% 20%;
+  margin: 100px 20% 10% 20%;
   padding: 25px;
   border-radius: 25px;
   display: flex;
@@ -236,9 +233,7 @@ nav {
   background-color: green;
   height: 150px;
   width: 100%;
-  /* position: absolute;
-  top: 200vh;
-  left: 0; */
+  position: absolute;
 }
 
 .contact_links ul {
@@ -336,6 +331,8 @@ nav {
   background-color: #fefefa;
   border-radius: 20px;
   border: 2px solid #ccb7ae;
+
+  display: none;
 }
 
 .art_btn:hover {
@@ -356,11 +353,8 @@ nav {
 
 .proj_box {
   display: block;
-  height: 250px;
-  width: 250px;
-  background-color: grey;
   margin: 10px;
-  float:left;
+  float: left;
   transition: transform 300ms;
 }
 
