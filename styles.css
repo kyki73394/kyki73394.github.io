@@ -1,132 +1,243 @@
 body {
-  /* background-color: #fefefa; */
-  background: linear-gradient(to bottom, #e5f4fb 5%, #fefefa 100%);
-  font-family: 'Montserrat', sans-serif;
-  font-family: 'Roboto', sans-serif;
+  /* background-color: #F3F2F2; */
+  font-family: 'Lato', sans-serif;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
 
-
-/* HOME NAV BAR */
-/* #allnav {
-  background-color: red;
-}
-
-nav {
-  background-color: purple;
-} */
-
-.nav {
-  list-style-type: none;
-  padding: 0;
-  text-align: right;
-  font-size: 15pt;
-  position: fixed;
-  top: 10px;
-  right: 25px;
-}
-
-.logo_nav {
-  list-style-type: none;
-  padding: 0;
-  font-size: 15pt;
-  position: fixed;
-  top: 0;
-  left: 25px;
-  color: white;
-}
-
-.nav li {
-  display: inline;
-  margin: 0px 20px 0px 20px;
-  color: black;
-}
-
-.nav li a {
-  text-decoration: none;
-  color: black;
-}
-
-.nav li a:hover {
-  text-decoration: none;
-  color: grey;
-}
-
-.nav li a::after {
-  color: black;
-}
-
-/* Other Pages NAV BAR */
-.altnav {
-  list-style-type: none;
-  padding: 0;
-  text-align: right;
-  font-size: 15pt;
-  position: fixed;
-  top: 10px;
-  right: 25px;
-}
-
-.alt_logo_nav {
-  list-style-type: none;
-  padding: 0;
-  font-size: 15pt;
-  position: fixed;
-  top: 0;
-  left: 25px;
-}
-
-.altnav li, .alt_logo_nav li {
-  display: inline;
-  margin: 0px 20px 0px 20px;
-  color: black;
-}
-
-.altnav li a , .alt_logo_nav li a {
-  text-decoration: none;
-  color: black;
-}
-
-.altnav li a:hover, .alt_logo_nav li a:hover {
-  color: grey;
-}
-
-.altnav li a::after , .alt_logo_nav li a::after {
-  color: black;
-}
-
 /*HOME PAGE*/
 
-/* Home elements */
+/*------------------------------------------------------------------------------------*/
+
+.index_body {
+  background-color: #F3F2F2;
+}
+
+.arrows_home {
+  font-size: 18pt;
+  font-weight: lighter;
+  text-align: left;
+  color: grey;
+
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_arrow_home a {
+  text-decoration: none;
+  color: grey;
+}
+
+.proj_arrow_home a {
+  text-decoration: none;
+  color: grey;
+}
 
 .home_header {
-  color: #0D574C;
-  position: fixed;
-  top: 30%;
-  left: 33%;
-  text-align: center;
-  font-size: 40pt;
-  margin: 0;
+  font-size: 24pt;
+  color: black;
+  margin: 50px 0 0 0;
   padding: 0;
 }
 
-
-.home_clouds {
-  position: absolute;
-  top: 300px;
-  z-index: 2;
-  width: 100%;
+/* referenced https://www.geeksforgeeks.org/how-to-reverse-an-animation-on-mouse-out-after-hover/?ref=lbp */
+.about_arrow_home {
+  padding-left: 100px;
+  animation: 300ms shrink;
+  margin: 25px;
 }
 
-.bgClouds {
-  background-image: url("assets/bgSkyDrawing.png");
+.about_arrow_home:hover div, .proj_arrow_home:hover div, .contact_arrow_home:hover div {
+  display: block;
+  animation: 2s fadeBgIn;
+}
+
+@keyframes fadeBgIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.about_arrow_home div {
+  width: 100vw;
   height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  z-index: -5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: radial-gradient(#8A3736, #9D464A);
+  display: none;
+}
+
+.proj_arrow_home {
+  padding-right: 100px;
+  animation: 300ms shrink;
+  margin: 25px;
+}
+
+.proj_arrow_home div {
+  width: 100vw;
+  height: 100vh;
+  z-index: -5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: radial-gradient(#B46325, #C37539);
+  display: none;
+}
+
+.contact_arrow_home {
+  padding-left: 100px;
+  animation: 300ms shrink;
+  margin: 25px;
+}
+
+.contact_arrow_home div {
+  width: 100vw;
+  height: 100vh;
+  z-index: -5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: radial-gradient(#529D76, #7CAC7C);
+  display: none;
+}
+
+.about_arrow_home a:hover, .proj_arrow_home a:hover, .contact_arrow_home:hover {
+  color: black;
+  cursor: pointer;
+  animation: 300ms expand;
+  font-size: 22pt;
+}
+
+@keyframes expand {
+  0% {
+    font-size: 18pt;
+  }
+  100% {
+    font-size: 22pt;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    font-size: 22pt;
+  }
+  100% {
+    font-size: 18pt;
+  }
+}
+
+/*  NAV BAR */
+
+.nav_cont {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  border-bottom: 1.5px solid #323232;
+  padding: 30px 0 5px 0;
+  background-color: white;
+}
+
+.nav_links {
+  list-style: none;
+  font-size: 14pt;
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  height: 25px;
+}
+
+.nav_links a {
+  text-decoration: none;
+  color: grey;
+  padding: 0;
+  margin: 0;
+  height: 10px;
+  font-style: italic;
+}
+
+.nav_links a:hover {
+  color: black;
+}
+
+.name_ul {
+  list-style: none;
+  font-size: 14pt;
+  width: 25%;
+  height: 25px;
+  text-align: center;
+  margin: 0;
+}
+
+.name_ul a {
+  color: black;
+  text-decoration: none;
+}
+
+.contact_links {
+  width: 25%;
+  padding: 0;
+  margin: 0;
+}
+
+.contact_links ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0;
+}
+
+.contact_links a {
+  color: black;
+  text-decoration: none;
+}
+
+.contact_links::after {
+  color: black;
+}
+
+
+
+/*------------------------------------------------------------------------------------*/
+
+/* Home elements */
+/*
+.home_header {
+  color: #0D574C;
+  position: sticky;
+  top: 10px;
+  left: 33%;
+  text-align: center;
+  font-size: 18pt;
+  margin: 0;
+  padding: 0;
+} */
+
+.home_img_cont {
+  width: 100%;
+  height: 500px;
+  /* background-color: #1b3420; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.garden_home_img {
+  width: 400px;
 }
 
 .proj_label {
@@ -227,36 +338,6 @@ nav {
   margin-right: 10px;
 }
 
-/* contact footer */
-
-.contact_links {
-  background-color: green;
-  height: 150px;
-  width: 100%;
-  position: absolute;
-}
-
-.contact_links ul {
-  list-style-type: none;
-}
-
-.contact_links a {
-  color: white;
-  text-decoration: none;
-  float: left;
-  margin-left: 10%;
-  margin-top: 25px;
-}
-
-.contact_links a:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-.contact_links a::after {
-  color: white;
-}
-
 /* Curiosities */
 .cur_box {
   height: 350px;
@@ -300,25 +381,40 @@ nav {
 
 /* PROJECTS PAGE */
 
-.proj_img {
-  margin-bottom: 5%;
-  display: flex;
-  flex-direction: row;
-}
-
-.proj_img img {
-  margin-right: 10%;
-}
-
-.proj_img p {
-  margin-top: 5%;
-  font-size: 14pt;
-}
-
-.all_proj_img {
-  margin: 10% 0 0 15%;
+.portfolio_nav {
+  position: fixed;
   display: flex;
   flex-direction: column;
+  top: 40%;
+  left: 2%;
+  list-style: none;
+
+  display: none;
+}
+
+.portfolio_nav li {
+  font-size: 14pt;
+  padding: 15px;
+  color: grey;
+  cursor: pointer;
+}
+
+.portfolio_nav li:hover {
+  color: black;
+  font-weight: bold;
+}
+
+.web_img_cont {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.web_img_cont img {
+  margin: 25px 0 10px 0;
 }
 
 /* ART PAGE */
@@ -383,9 +479,6 @@ nav {
 }
 
 /* ABOUT PAGE */
-.about_body {
-  background-color: #FBFBFB;
-}
 
 .profile_pic {
   position: absolute;

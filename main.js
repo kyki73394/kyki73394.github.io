@@ -1,20 +1,20 @@
 //header change via w3 schools (edited from header shrink)
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-
-  const height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
-  const halfHeight = height / 2;
-
-  if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
-    document.getElementById("nav_logo").style.color = "black";
-    document.getElementById("home_header").style.display = "none";
-
-  } else {
-    document.getElementById("nav_logo").style.color = "white";
-    document.getElementById("home_header").style.display = "block";
-  }
-}
+// window.onscroll = function() {scrollFunction()};
+//
+// function scrollFunction() {
+//
+//   const height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
+//   const halfHeight = height / 2;
+//
+//   if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
+//     document.getElementById("nav_logo").style.color = "black";
+//     document.getElementById("home_header").style.display = "none";
+//
+//   } else {
+//     document.getElementById("nav_logo").style.color = "white";
+//     document.getElementById("home_header").style.display = "block";
+//   }
+// }
 
 //edited from toggle Dark Mode from w3 schools
 function toggleUX() {
