@@ -51,3 +51,52 @@ const observer = new IntersectionObserver(entries => {
 
 observer.observe(document.querySelector('.proj_label'));
 observer.observe(document.querySelector('.home_proj_img'));
+
+//projects page animation to bold title
+//referenced from Sidebar bullet navigation by Mydrax on CodePen
+const indicators = document.querySelectorAll(".indicator");
+const sections = document.querySelectorAll("section");
+
+const resetCurrentActiveIndicator = () => {
+  const activeIndicator = document.querySelector(".active");
+  activeIndicator.classList.remove("active");
+  console.log('removed active class');
+};
+
+const onSectionLeavesViewport = (section) => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log('in section');
+          resetCurrentActiveIndicator();
+          const element = entry.target;
+          const indicator = document.querySelector(`a[href='#${element.id}']`);
+          console.log(indicator);
+          indicator.classList.add("active");
+          console.log('add active class');
+          return;
+        }
+      });
+    },
+    {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.2
+    }
+  );
+  observer.observe(section);
+};
+
+// indicators.forEach((indicator) => {
+//   indicator.addEventListener("click", function (event) {
+//     event.preventDefault();
+//     document
+//       .querySelector(this.getAttribute("href"))
+//       .scrollIntoView({ behavior: "smooth" });
+//     resetCurrentActiveIndicator();
+//     this.classList.add("active");
+//   });
+// });
+
+sections.forEach(onSectionLeavesViewport);

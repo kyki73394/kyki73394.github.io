@@ -236,13 +236,12 @@ body {
   align-items: center;
 }
 
-.garden_home_img {
+/* .garden_home_img {
   width: 400px;
-}
+} */
 
 .proj_label {
   font-size: 20pt;
-  margin: 120vh 0 0 0;
   text-align: center;
 }
 
@@ -278,9 +277,21 @@ body {
   justify-content: center;
 }
 
+.home_proj_moreBtn {
+  float: right;
+  margin: 10px 18% 50px 0;
+  font-size: 14pt;
+  text-decoration: none;
+  color: black;
+}
+
+.home_proj_moreBtn:hover {
+  text-decoration: underline;
+}
+
 /* skill section */
 
-.stats {
+/* .stats {
   background-color: #ccb7ae;
   margin: 100px 20% 10% 20%;
   padding: 25px;
@@ -336,10 +347,10 @@ body {
   width: 50%;
   height: 25px;
   margin-right: 10px;
-}
+} */
 
 /* Curiosities */
-.cur_box {
+/* .cur_box {
   height: 350px;
   width: 250px;
   background-color: white;
@@ -352,16 +363,15 @@ body {
   height: 350px;
   width: 250px;
   border-radius: 20px;
-  /* border: 1px solid black; */
   margin: 50px;
   overflow: hidden;
   background-color: #f3e6e7;
 
-}
+} */
 
 /* Referenced this site for flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 
-.all_box {
+/* .all_box {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -376,7 +386,7 @@ body {
 
 .cur_label h3 {
   margin: 0 12%;
-}
+} */
 
 
 /* PROJECTS PAGE */
@@ -388,24 +398,37 @@ body {
   top: 40%;
   left: 2%;
   list-style: none;
-
-  display: none;
 }
 
-.portfolio_nav li {
-  font-size: 14pt;
-  padding: 15px;
+/* section {
+  background-color: yellow;
+} */
+
+.indicator {
   color: grey;
+  font-size: 14pt;
   cursor: pointer;
+  margin: 10px 0 10px 0;
+  text-decoration: none;
 }
 
-.portfolio_nav li:hover {
+.active {
+  font-weight: bold;
+  color: black;
+}
+
+.indicator:hover {
   color: black;
   font-weight: bold;
 }
 
+.portfolio_nav p {
+  display: none;
+}
+
 .web_img_cont {
-  width: 100%;
+  width: 80%;
+  margin-left: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -450,21 +473,24 @@ body {
 .proj_box {
   display: block;
   margin: 10px;
-  float: left;
-  transition: transform 300ms;
+  /* float: left;
+  transition: transform 300ms; */
 }
 
 .all_proj_boxes {
-  margin-left: 10%;
+  /* margin-left: 10%; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .box_off {
   display: none;
 }
 
-.proj_box:hover {
+/* .proj_box:hover {
   transform: scale(1.08);
-}
+} */
 
 .proj_txt {
   width: 250px;
