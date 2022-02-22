@@ -172,54 +172,23 @@ body {
   animation: 300ms glideDown;
 }
 
-.extra_arrow_home div {
-  width: 100vw;
-  height: 100vh;
-  opacity: 90%;
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #F9F9F9;
-  /* background: radial-gradient(#B46325, #C37539); */
-  display: none;
-}
-
-.about_arrow_home div {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #F9F9F9;
-  opacity: 90%;
-  z-index: -1;
-  /* background: radial-gradient(#B46325, #C37539); */
-  display: none;
-}
-
 .proj_arrow_home {
-  align-self: center;
   width: 25%;
   overflow: hidden;
+  height: 300px;
 }
 
 .extra_arrow_home {
-  align-self: center;
   width: 25%;
   overflow: hidden;
+  height: 300px;
 }
 
 .about_arrow_home {
-  align-self: center;
   width: 25%;
   overflow: hidden;
+  height: 300px;
 }
-
-/* .contact_arrow_home {
-  float: right;
-  font-size: 18pt;
-} */
 
 .about_arrow_home:hover a, .proj_arrow_home:hover a, .extra_arrow_home:hover a {
   cursor: pointer;
@@ -235,21 +204,6 @@ body {
 .about_arrow_home:hover img, .proj_arrow_home:hover img, .extra_arrow_home:hover img {
   filter: blur(2px);
 }
-
-/* .about_arrow_home:hover div, .extra_arrow_home:hover div {
-  display: block;
-  animation: 2s fadeBgIn;
-}
-
-@keyframes fadeBgIn {
-  0% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 90%;
-  }
-} */
-
 
 @keyframes glideUp {
   0% {
@@ -561,10 +515,6 @@ body {
   list-style: none;
 }
 
-/* section {
-  background-color: yellow;
-} */
-
 .indicator {
   color: grey;
   font-size: 14pt;
@@ -589,16 +539,54 @@ body {
 
 .web_img_cont {
   width: 80%;
-  margin-left: 20%;
+  margin-left: 10%;
+
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-top: 100px;
+  overflow: hidden;
+}
+
+.web_sub_cont {
+  width: 750px;
+  height: 500px;
+  margin-bottom: 25px;
 }
 
 .web_img_cont img {
-  margin: 25px 0 10px 0;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.web_img_cont p {
+  position: absolute;
+  left: 5%;
+  margin-top: 15%;
+  line-height: 30px;
+}
+
+.overlay {
+  background-color: white;
+  height: 500px;
+  width: 750px;
+  position: absolute;
+  opacity: 0%;
+}
+
+.overlay:hover {
+  animation: 300ms bgFadeIn;
+  opacity: 50%;
+}
+
+@keyframed bgFadeIn {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 50%;
+    }
 }
 
 /* ART PAGE */
