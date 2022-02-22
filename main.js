@@ -39,7 +39,7 @@ function toggleCode() {
   elem.classList.toggle("box_off");
 }
 
-// animation referenced from https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/
+//animation referenced from https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -49,8 +49,10 @@ const observer = new IntersectionObserver(entries => {
   });
 });
 
-observer.observe(document.querySelector('.proj_label'));
-observer.observe(document.querySelector('.home_proj_img'));
+// // observer.observe(document.querySelector('.proj_label'));
+// // observer.observe(document.querySelector('.home_proj_img'));
+observer.observe(document.querySelector('.home_subtitle'));
+observer.observe(document.querySelector('.home_header'));
 
 //projects page animation to bold title
 //referenced from Sidebar bullet navigation by Mydrax on CodePen

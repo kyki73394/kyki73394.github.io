@@ -1,5 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  /* background-color: #F3F2F2; */
+  background-color: #F9F9F9;
   font-family: 'Lato', sans-serif;
   overflow-x: hidden;
   margin: 0;
@@ -10,49 +14,229 @@ body {
 
 /*------------------------------------------------------------------------------------*/
 
-.index_body {
-  background-color: #F3F2F2;
+/* .index_body {
+
+} */
+
+.home_header {
+  position: absolute;
+  top: 200px;
+  right: 25%;
+  z-index: -1;
+}
+
+.home_header h2 {
+  font-weight: lighter;
+  padding: 0;
+  margin: 0;
+}
+
+
+.home_header p {
+  width: 210px;
+}
+
+.home_profile_img {
+  margin: 150px 25px 0 30%;
+}
+
+.home_flower {
+  position: absolute;
+  top: 430px;
+  left: 31%;
+  /* top: 400px;
+  right: 30%; */
+}
+
+.bracket1 {
+  width: 25vw;
+}
+
+.bracket2 {
+  width: 20vw;
+}
+
+.bracket_cont {
+  position: absolute;
+  top: 40px;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 5%;
+  z-index: -1;
+}
+
+.bracket_sub1 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.bracket_sub2 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  padding: 5px 0 0 0;
+}
+
+.bracket_sub1 p {
+  margin: -12px;
+  padding: 0;
+}
+
+.bracket_sub2 p {
+  margin: -5px;
+  padding: 0;
+}
+
+/* mid section */
+.home_subtitle {
+  font-weight: lighter;
+  text-align: center;
+  margin-top: 200px;
+}
+
+/* animation referenced from https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/ */
+.anim_proj_home {
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
 .arrows_home {
-  font-size: 18pt;
-  font-weight: lighter;
-  text-align: left;
-  color: grey;
-
-  width: 100%;
-  height: 100vh;
+  width: 80%;
+  height: auto;
+  margin: 50px 10% 100px 10%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
 
-.about_arrow_home a {
-  text-decoration: none;
-  color: grey;
+.proj_arrow_home img {
+  width: 105%;
+  margin: -5%;
+}
+
+.extra_arrow_home img {
+  width: 105%;
+}
+
+.about_arrow_home img {
+  width: 105%;
+  margin-left: -5%;
 }
 
 .proj_arrow_home a {
   text-decoration: none;
-  color: grey;
+  display: flex;
+  flex-direction: column;
+  font-size: 20pt;
+  font-weight: lighter;
+  margin: -20px 0 0 15px;
+  color: white;
+  opacity: 0;
+  animation: 300ms glideDown;
 }
 
-.home_header {
-  font-size: 24pt;
-  color: black;
-  margin: 50px 0 0 0;
-  padding: 0;
+.extra_arrow_home a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 20pt;
+  font-weight: lighter;
+  margin: -20px 0 0 15px;
+  color: white;
+  opacity: 0;
+  animation: 300ms glideDown;
 }
 
-/* referenced https://www.geeksforgeeks.org/how-to-reverse-an-animation-on-mouse-out-after-hover/?ref=lbp */
+.about_arrow_home a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 20pt;
+  font-weight: lighter;
+  margin: -20px 0 0 15px;
+  color: white;
+  opacity: 0;
+  animation: 300ms glideDown;
+}
+
+.extra_arrow_home div {
+  width: 100vw;
+  height: 100vh;
+  opacity: 90%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #F9F9F9;
+  /* background: radial-gradient(#B46325, #C37539); */
+  display: none;
+}
+
+.about_arrow_home div {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #F9F9F9;
+  opacity: 90%;
+  z-index: -1;
+  /* background: radial-gradient(#B46325, #C37539); */
+  display: none;
+}
+
+.proj_arrow_home {
+  align-self: center;
+  width: 25%;
+  overflow: hidden;
+}
+
+.extra_arrow_home {
+  align-self: center;
+  width: 25%;
+  overflow: hidden;
+}
+
 .about_arrow_home {
-  padding-left: 100px;
-  animation: 300ms shrink;
-  margin: 25px;
+  align-self: center;
+  width: 25%;
+  overflow: hidden;
 }
 
-.about_arrow_home:hover div, .proj_arrow_home:hover div, .contact_arrow_home:hover div {
+/* .contact_arrow_home {
+  float: right;
+  font-size: 18pt;
+} */
+
+.about_arrow_home:hover a, .proj_arrow_home:hover a, .extra_arrow_home:hover a {
+  cursor: pointer;
+  z-index: 5;
+  animation: 300ms glideUp;
+  color: white;
+  margin-top: -90px;
+  opacity: 100%;
+  filter: blur(0);
+}
+
+/* referenced https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/blur() */
+.about_arrow_home:hover img, .proj_arrow_home:hover img, .extra_arrow_home:hover img {
+  filter: blur(2px);
+}
+
+/* .about_arrow_home:hover div, .extra_arrow_home:hover div {
   display: block;
   animation: 2s fadeBgIn;
 }
@@ -62,91 +246,46 @@ body {
     opacity: 0%;
   }
   100% {
+    opacity: 90%;
+  }
+} */
+
+
+@keyframes glideUp {
+  0% {
+    margin-top: -20px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: -90px;
     opacity: 100%;
   }
 }
 
-.about_arrow_home div {
-  width: 100vw;
-  height: 100vh;
-  z-index: -5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: radial-gradient(#8A3736, #9D464A);
-  display: none;
-}
-
-.proj_arrow_home {
-  padding-right: 100px;
-  animation: 300ms shrink;
-  margin: 25px;
-}
-
-.proj_arrow_home div {
-  width: 100vw;
-  height: 100vh;
-  z-index: -5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: radial-gradient(#B46325, #C37539);
-  display: none;
-}
-
-.contact_arrow_home {
-  padding-left: 100px;
-  animation: 300ms shrink;
-  margin: 25px;
-}
-
-.contact_arrow_home div {
-  width: 100vw;
-  height: 100vh;
-  z-index: -5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: radial-gradient(#529D76, #7CAC7C);
-  display: none;
-}
-
-.about_arrow_home a:hover, .proj_arrow_home a:hover, .contact_arrow_home:hover {
-  color: black;
-  cursor: pointer;
-  animation: 300ms expand;
-  font-size: 22pt;
-}
-
-@keyframes expand {
+@keyframes glideDown {
   0% {
-    font-size: 18pt;
+    margin-top: -90px;
+    opacity: 100%;
   }
   100% {
-    font-size: 22pt;
-  }
-}
-
-@keyframes shrink {
-  0% {
-    font-size: 22pt;
-  }
-  100% {
-    font-size: 18pt;
+    margin-top: -20px;
+    opacity: 0;
   }
 }
 
 /*  NAV BAR */
 
 .nav_cont {
-  position: absolute;
+  position: fixed;
   top: 0;
   display: flex;
   justify-content: space-around;
   width: 100%;
-  border-bottom: 1.5px solid #323232;
-  padding: 30px 0 5px 0;
-  background-color: white;
+  padding: 30px 0 0 0;
+  background-color: #F9F9F9;
+  /* padding: 30px 0 30px 0;
+  background: linear-gradient(to bottom, #F9F9F9 70%, transparent 100%); */
+  z-index: 5;
 }
 
 .nav_links {
@@ -157,34 +296,53 @@ body {
   justify-content: space-around;
   padding: 0;
   margin: 0;
-  height: 25px;
+  /* height: 25px; */
+  font-style: italic;
 }
 
 .nav_links a {
   text-decoration: none;
   color: grey;
-  padding: 0;
+  padding: 5px;
   margin: 0;
   height: 10px;
-  font-style: italic;
 }
 
 .nav_links a:hover {
   color: black;
+  animation: 300ms outline;
+  border-bottom: 2px solid black;
 }
 
 .name_ul {
   list-style: none;
   font-size: 14pt;
-  width: 25%;
-  height: 25px;
+  /* width: 25%;
+  height: 25px; */
   text-align: center;
-  margin: 0;
+  margin: 0 10%;
 }
 
 .name_ul a {
   color: black;
   text-decoration: none;
+  padding: 5px;
+}
+
+.name_ul a:hover {
+  animation: 300ms outline;
+  border-bottom: 2px solid black;
+}
+
+@keyframes outline {
+  0% {
+    border-bottom: transparent;
+    padding-bottom: 10px;
+  }
+  100% {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+  }
 }
 
 .contact_links {
@@ -210,7 +368,10 @@ body {
   color: black;
 }
 
-
+.active_pg {
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+}
 
 /*------------------------------------------------------------------------------------*/
 
@@ -510,13 +671,12 @@ body {
   position: absolute;
   overflow: hidden;
   top: 20%;
-  height: 400px;
-  background-color: grey;
-  margin: 0 0 0 20%;
+  left: 30%;
+  height: 350px;
 }
 
 .profile_text {
-  width: 400px;
-  margin: 10% 10% 0 45%;
+  width: 300px;
+  margin: 10% 10% 0 55%;
   height: 100vh;
 }
