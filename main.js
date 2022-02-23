@@ -102,3 +102,27 @@ const onSectionLeavesViewport = (section) => {
 // });
 
 sections.forEach(onSectionLeavesViewport);
+
+
+//Project hover/open descriptions
+function openCURIS() {
+  var elem = document.getElementById("curis_abt");
+  elem.classList.toggle("abt_on");
+
+  var elem = document.getElementById("xButton");
+  elem.classList.toggle("abt_on");
+
+  var elem = document.getElementById("overlay");
+  elem.classList.toggle("open_overlay");
+}
+
+function openUncover() {
+  var elem = document.getElementById("uncover_abt");
+  elem.classList.toggle("abt_on");
+
+  var elem = document.getElementById("xButton2");
+  elem.classList.toggle("abt_on");
+
+  var elem = document.getElementById("overlay2");
+  elem.classList.toggle("open_overlay");
+}
